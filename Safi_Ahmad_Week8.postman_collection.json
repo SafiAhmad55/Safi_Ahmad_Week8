@@ -1,0 +1,1241 @@
+{
+  "info": {
+    "_postman_id": "9d3ac599-7054-4c11-a6f3-af0c36d6cd05",
+    "name": "Safi_Ahmad_Week8",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "57417114",
+    "_collection_link": "https://go.postman.co/collection/57417114-9d3ac599-7054-4c11-a6f3-af0c36d6cd05?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "Create Invoice",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"invoiceNumber\": \"INV-OVERDUE-004\",\r\n  \"client\": \"6a8f09eb1edd400aafb720d7\",\r\n  \"project\": \"6ab5603261ba06d9dad8da7b\",\r\n  \"issueDate\": \"2026-09-01\",\r\n  \"dueDate\": \"2026-09-15\",\r\n  \"items\": [\r\n    {\r\n      \"description\": \"Car Rental Service\",\r\n      \"quantity\": 3,\r\n      \"unitPrice\": 5000\r\n    }\r\n  ],\r\n  \"status\": \"Overdue\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:5001/api/invoices",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5001",
+          "path": [
+            "api",
+            "invoices"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "Create_Invoice_1",
+          "originalRequest": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"invoiceNumber\": \"INV-001\",\r\n  \"client\": \"6a8f09eb1edd400aafb720d7\",\r\n  \"project\": \"6a99a5a99d1f3b74db8ebe60\",\r\n  \"issueDate\": \"2026-10-01\",\r\n  \"dueDate\": \"2026-10-15\",\r\n  \"items\": [\r\n    {\r\n      \"description\": \"Website Development\",\r\n      \"quantity\": 2,\r\n      \"unitPrice\": 500\r\n    },\r\n    {\r\n      \"description\": \"Database Setup\",\r\n      \"quantity\": 1,\r\n      \"unitPrice\": 300\r\n    }\r\n  ],\r\n  \"status\": \"Draft\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:5001/api/invoices",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5001",
+              "path": [
+                "api",
+                "invoices"
+              ]
+            }
+          },
+          "status": "Created",
+          "code": 201,
+          "_postman_previewlanguage": "json",
+          "header": [
+            {
+              "key": "x-powered-by",
+              "value": "Express"
+            },
+            {
+              "key": "access-control-allow-origin",
+              "value": "*"
+            },
+            {
+              "key": "content-type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "content-length",
+              "value": "577"
+            },
+            {
+              "key": "etag",
+              "value": "W/\"241-YtDh9bEZj189Yn/NPMeRpc1DU2w\""
+            },
+            {
+              "key": "date",
+              "value": "Thu, 01 Oct 2026 16:40:50 GMT"
+            },
+            {
+              "key": "connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "keep-alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n  \"invoiceNumber\": \"INV-001\",\n  \"client\": \"6a8f09eb1edd400aafb720d7\",\n  \"project\": \"6a99a5a99d1f3b74db8ebe60\",\n  \"issueDate\": \"2026-10-01T00:00:00.000Z\",\n  \"dueDate\": \"2026-10-15T00:00:00.000Z\",\n  \"items\": [\n    {\n      \"description\": \"Website Development\",\n      \"quantity\": 2,\n      \"unitPrice\": 500,\n      \"total\": 1000,\n      \"_id\": \"6abe8d12e3edd1fa17692239\"\n    },\n    {\n      \"description\": \"Database Setup\",\n      \"quantity\": 1,\n      \"unitPrice\": 300,\n      \"total\": 300,\n      \"_id\": \"6abe8d12e3edd1fa1769223a\"\n    }\n  ],\n  \"subtotal\": 1300,\n  \"totalAmount\": 1300,\n  \"status\": \"Draft\",\n  \"_id\": \"6abe8d12e3edd1fa17692238\",\n  \"createdAt\": \"2026-10-01T16:40:50.315Z\",\n  \"updatedAt\": \"2026-10-01T16:40:50.315Z\",\n  \"__v\": 0\n}"
+        },
+        {
+          "name": "Create Invoice_2",
+          "originalRequest": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"invoiceNumber\": \"INV-CAR-002\",\r\n  \"client\": \"6a8f09eb1edd400aafb720d7\",\r\n  \"project\": \"6ab5603261ba06d9dad8da7b\",\r\n  \"issueDate\": \"2026-10-01\",\r\n  \"dueDate\": \"2026-10-10\",\r\n  \"items\": [\r\n    {\r\n      \"description\": \"Toyota Corolla Rental - 5 Days\",\r\n      \"quantity\": 5,\r\n      \"unitPrice\": 4000\r\n    },\r\n    {\r\n      \"description\": \"GPS Navigation\",\r\n      \"quantity\": 1,\r\n      \"unitPrice\": 1500\r\n    },\r\n    {\r\n      \"description\": \"Insurance\",\r\n      \"quantity\": 1,\r\n      \"unitPrice\": 3000\r\n    }\r\n  ],\r\n  \"status\": \"Sent\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:5001/api/invoices",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5001",
+              "path": [
+                "api",
+                "invoices"
+              ]
+            }
+          },
+          "status": "Created",
+          "code": 201,
+          "_postman_previewlanguage": "json",
+          "header": [
+            {
+              "key": "x-powered-by",
+              "value": "Express"
+            },
+            {
+              "key": "access-control-allow-origin",
+              "value": "*"
+            },
+            {
+              "key": "content-type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "content-length",
+              "value": "701"
+            },
+            {
+              "key": "etag",
+              "value": "W/\"2bd-NCvyEF8bJjIMEj+sMQHwSOUgRsE\""
+            },
+            {
+              "key": "date",
+              "value": "Thu, 01 Oct 2026 16:44:13 GMT"
+            },
+            {
+              "key": "connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "keep-alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n  \"invoiceNumber\": \"INV-CAR-002\",\n  \"client\": \"6a8f09eb1edd400aafb720d7\",\n  \"project\": \"6ab5603261ba06d9dad8da7b\",\n  \"issueDate\": \"2026-10-01T00:00:00.000Z\",\n  \"dueDate\": \"2026-10-10T00:00:00.000Z\",\n  \"items\": [\n    {\n      \"description\": \"Toyota Corolla Rental - 5 Days\",\n      \"quantity\": 5,\n      \"unitPrice\": 4000,\n      \"total\": 20000,\n      \"_id\": \"6abe8ddce3edd1fa1769223c\"\n    },\n    {\n      \"description\": \"GPS Navigation\",\n      \"quantity\": 1,\n      \"unitPrice\": 1500,\n      \"total\": 1500,\n      \"_id\": \"6abe8ddce3edd1fa1769223d\"\n    },\n    {\n      \"description\": \"Insurance\",\n      \"quantity\": 1,\n      \"unitPrice\": 3000,\n      \"total\": 3000,\n      \"_id\": \"6abe8ddce3edd1fa1769223e\"\n    }\n  ],\n  \"subtotal\": 24500,\n  \"totalAmount\": 24500,\n  \"status\": \"Sent\",\n  \"_id\": \"6abe8ddce3edd1fa1769223b\",\n  \"createdAt\": \"2026-10-01T16:44:12.412Z\",\n  \"updatedAt\": \"2026-10-01T16:44:12.412Z\",\n  \"__v\": 0\n}"
+        },
+        {
+          "name": "Create_Invoice_3",
+          "originalRequest": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"invoiceNumber\": \"INV-BANK-003\",\r\n  \"client\": \"6a8ebe631a0222c56201c19e\",\r\n  \"project\": \"6ab55ef161ba06d9dad8da77\",\r\n  \"issueDate\": \"2026-10-01\",\r\n  \"dueDate\": \"2026-10-15\",\r\n  \"items\": [\r\n    {\r\n      \"description\": \"Banking App Development\",\r\n      \"quantity\": 1,\r\n      \"unitPrice\": 50000\r\n    },\r\n    {\r\n      \"description\": \"Mobile Banking UI Design\",\r\n      \"quantity\": 1,\r\n      \"unitPrice\": 15000\r\n    },\r\n    {\r\n      \"description\": \"Security & Authentication Module\",\r\n      \"quantity\": 1,\r\n      \"unitPrice\": 20000\r\n    }\r\n  ],\r\n  \"status\": \"Draft\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:5001/api/invoices",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5001",
+              "path": [
+                "api",
+                "invoices"
+              ]
+            }
+          },
+          "status": "Created",
+          "code": 201,
+          "_postman_previewlanguage": "json",
+          "header": [
+            {
+              "key": "x-powered-by",
+              "value": "Express"
+            },
+            {
+              "key": "access-control-allow-origin",
+              "value": "*"
+            },
+            {
+              "key": "content-type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "content-length",
+              "value": "734"
+            },
+            {
+              "key": "etag",
+              "value": "W/\"2de-S8zUAe+VWctqTwo70FI2NMDml1c\""
+            },
+            {
+              "key": "date",
+              "value": "Thu, 01 Oct 2026 16:45:59 GMT"
+            },
+            {
+              "key": "connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "keep-alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n  \"invoiceNumber\": \"INV-BANK-003\",\n  \"client\": \"6a8ebe631a0222c56201c19e\",\n  \"project\": \"6ab55ef161ba06d9dad8da77\",\n  \"issueDate\": \"2026-10-01T00:00:00.000Z\",\n  \"dueDate\": \"2026-10-15T00:00:00.000Z\",\n  \"items\": [\n    {\n      \"description\": \"Banking App Development\",\n      \"quantity\": 1,\n      \"unitPrice\": 50000,\n      \"total\": 50000,\n      \"_id\": \"6abe8e46e3edd1fa17692240\"\n    },\n    {\n      \"description\": \"Mobile Banking UI Design\",\n      \"quantity\": 1,\n      \"unitPrice\": 15000,\n      \"total\": 15000,\n      \"_id\": \"6abe8e46e3edd1fa17692241\"\n    },\n    {\n      \"description\": \"Security & Authentication Module\",\n      \"quantity\": 1,\n      \"unitPrice\": 20000,\n      \"total\": 20000,\n      \"_id\": \"6abe8e46e3edd1fa17692242\"\n    }\n  ],\n  \"subtotal\": 85000,\n  \"totalAmount\": 85000,\n  \"status\": \"Draft\",\n  \"_id\": \"6abe8e46e3edd1fa1769223f\",\n  \"createdAt\": \"2026-10-01T16:45:58.483Z\",\n  \"updatedAt\": \"2026-10-01T16:45:58.483Z\",\n  \"__v\": 0\n}"
+        },
+        {
+          "name": "Create Invoice_4",
+          "originalRequest": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"invoiceNumber\": \"INV-OVERDUE-004\",\r\n  \"client\": \"6a8f09eb1edd400aafb720d7\",\r\n  \"project\": \"6ab5603261ba06d9dad8da7b\",\r\n  \"issueDate\": \"2026-09-01\",\r\n  \"dueDate\": \"2026-09-15\",\r\n  \"items\": [\r\n    {\r\n      \"description\": \"Car Rental Service\",\r\n      \"quantity\": 3,\r\n      \"unitPrice\": 5000\r\n    }\r\n  ],\r\n  \"status\": \"Overdue\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:5001/api/invoices",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5001",
+              "path": [
+                "api",
+                "invoices"
+              ]
+            }
+          },
+          "status": "Created",
+          "code": 201,
+          "_postman_previewlanguage": "json",
+          "header": [
+            {
+              "key": "x-powered-by",
+              "value": "Express"
+            },
+            {
+              "key": "access-control-allow-origin",
+              "value": "*"
+            },
+            {
+              "key": "content-type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "content-length",
+              "value": "483"
+            },
+            {
+              "key": "etag",
+              "value": "W/\"1e3-ZiWheVn21nVGdy+t5eIzXubianE\""
+            },
+            {
+              "key": "date",
+              "value": "Thu, 01 Oct 2026 17:23:13 GMT"
+            },
+            {
+              "key": "connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "keep-alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n  \"invoiceNumber\": \"INV-OVERDUE-004\",\n  \"client\": \"6a8f09eb1edd400aafb720d7\",\n  \"project\": \"6ab5603261ba06d9dad8da7b\",\n  \"issueDate\": \"2026-09-01T00:00:00.000Z\",\n  \"dueDate\": \"2026-09-15T00:00:00.000Z\",\n  \"items\": [\n    {\n      \"description\": \"Car Rental Service\",\n      \"quantity\": 3,\n      \"unitPrice\": 5000,\n      \"total\": 15000,\n      \"_id\": \"6abe97000040f59220040f3f\"\n    }\n  ],\n  \"subtotal\": 15000,\n  \"totalAmount\": 15000,\n  \"status\": \"Overdue\",\n  \"_id\": \"6abe97000040f59220040f3e\",\n  \"createdAt\": \"2026-10-01T17:23:12.628Z\",\n  \"updatedAt\": \"2026-10-01T17:23:12.628Z\",\n  \"__v\": 0\n}"
+        }
+      ]
+    },
+    {
+      "name": "view_all_Invoices",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5001/api/invoices",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5001",
+          "path": [
+            "api",
+            "invoices"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "view_all_invoices",
+          "originalRequest": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:5001/api/invoices",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5001",
+              "path": [
+                "api",
+                "invoices"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": "json",
+          "header": [
+            {
+              "key": "x-powered-by",
+              "value": "Express"
+            },
+            {
+              "key": "access-control-allow-origin",
+              "value": "*"
+            },
+            {
+              "key": "content-type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "content-length",
+              "value": "3663"
+            },
+            {
+              "key": "etag",
+              "value": "W/\"e4f-umQuWU+AvtwZ9fMpwS24OTtv39w\""
+            },
+            {
+              "key": "date",
+              "value": "Thu, 01 Oct 2026 16:49:03 GMT"
+            },
+            {
+              "key": "connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "keep-alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "[\n  {\n    \"_id\": \"6abe8d12e3edd1fa17692238\",\n    \"invoiceNumber\": \"INV-001\",\n    \"client\": {\n      \"_id\": \"6a8f09eb1edd400aafb720d7\",\n      \"name\": \"singhhargeet\",\n      \"email\": \"singh1648@hotmail.com\",\n      \"phone\": \"9100485756\",\n      \"company\": \"Indian technology corporation limited\",\n      \"status\": \"Active\",\n      \"createdAt\": \"2026-08-26T15:44:43.743Z\",\n      \"updatedAt\": \"2026-08-26T15:44:43.743Z\",\n      \"__v\": 0\n    },\n    \"project\": {\n      \"_id\": \"6a99a5a99d1f3b74db8ebe60\",\n      \"name\": \"Company Portfolio\",\n      \"description\": \"Design and development of a company portfolio website.\",\n      \"client\": \"6a8ebe631a0222c56201c19e\",\n      \"startDate\": \"2026-09-10T00:00:00.000Z\",\n      \"deadline\": \"2026-10-20T00:00:00.000Z\",\n      \"status\": \"Completed\",\n      \"createdAt\": \"2026-09-03T16:51:53.288Z\",\n      \"updatedAt\": \"2026-09-03T16:51:53.288Z\",\n      \"__v\": 0\n    },\n    \"issueDate\": \"2026-10-01T00:00:00.000Z\",\n    \"dueDate\": \"2026-10-15T00:00:00.000Z\",\n    \"items\": [\n      {\n        \"description\": \"Website Development\",\n        \"quantity\": 2,\n        \"unitPrice\": 500,\n        \"total\": 1000,\n        \"_id\": \"6abe8d12e3edd1fa17692239\"\n      },\n      {\n        \"description\": \"Database Setup\",\n        \"quantity\": 1,\n        \"unitPrice\": 300,\n        \"total\": 300,\n        \"_id\": \"6abe8d12e3edd1fa1769223a\"\n      }\n    ],\n    \"subtotal\": 1300,\n    \"totalAmount\": 1300,\n    \"status\": \"Draft\",\n    \"createdAt\": \"2026-10-01T16:40:50.315Z\",\n    \"updatedAt\": \"2026-10-01T16:40:50.315Z\",\n    \"__v\": 0\n  },\n  {\n    \"_id\": \"6abe8ddce3edd1fa1769223b\",\n    \"invoiceNumber\": \"INV-CAR-002\",\n    \"client\": {\n      \"_id\": \"6a8f09eb1edd400aafb720d7\",\n      \"name\": \"singhhargeet\",\n      \"email\": \"singh1648@hotmail.com\",\n      \"phone\": \"9100485756\",\n      \"company\": \"Indian technology corporation limited\",\n      \"status\": \"Active\",\n      \"createdAt\": \"2026-08-26T15:44:43.743Z\",\n      \"updatedAt\": \"2026-08-26T15:44:43.743Z\",\n      \"__v\": 0\n    },\n    \"project\": {\n      \"_id\": \"6ab5603261ba06d9dad8da7b\",\n      \"name\": \"Car Rental System\",\n      \"description\": \"building a car Rental system.\",\n      \"client\": \"6a8f09eb1edd400aafb720d7\",\n      \"startDate\": \"2027-05-10T00:00:00.000Z\",\n      \"deadline\": \"2027-08-21T00:00:00.000Z\",\n      \"status\": \"On Hold\",\n      \"createdAt\": \"2026-09-24T17:38:58.235Z\",\n      \"updatedAt\": \"2026-09-24T17:38:58.235Z\",\n      \"__v\": 0\n    },\n    \"issueDate\": \"2026-10-01T00:00:00.000Z\",\n    \"dueDate\": \"2026-10-10T00:00:00.000Z\",\n    \"items\": [\n      {\n        \"description\": \"Toyota Corolla Rental - 5 Days\",\n        \"quantity\": 5,\n        \"unitPrice\": 4000,\n        \"total\": 20000,\n        \"_id\": \"6abe8ddce3edd1fa1769223c\"\n      },\n      {\n        \"description\": \"GPS Navigation\",\n        \"quantity\": 1,\n        \"unitPrice\": 1500,\n        \"total\": 1500,\n        \"_id\": \"6abe8ddce3edd1fa1769223d\"\n      },\n      {\n        \"description\": \"Insurance\",\n        \"quantity\": 1,\n        \"unitPrice\": 3000,\n        \"total\": 3000,\n        \"_id\": \"6abe8ddce3edd1fa1769223e\"\n      }\n    ],\n    \"subtotal\": 24500,\n    \"totalAmount\": 24500,\n    \"status\": \"Sent\",\n    \"createdAt\": \"2026-10-01T16:44:12.412Z\",\n    \"updatedAt\": \"2026-10-01T16:44:12.412Z\",\n    \"__v\": 0\n  },\n  {\n    \"_id\": \"6abe8e46e3edd1fa1769223f\",\n    \"invoiceNumber\": \"INV-BANK-003\",\n    \"client\": {\n      \"_id\": \"6a8ebe631a0222c56201c19e\",\n      \"name\": \"nadeem jan\",\n      \"email\": \"nadeembobo590@gmail.com\",\n      \"phone\": \"094746188596\",\n      \"company\": \"solution marker\",\n      \"status\": \"Inactive\",\n      \"createdAt\": \"2026-08-26T10:22:27.022Z\",\n      \"updatedAt\": \"2026-08-26T10:22:27.022Z\",\n      \"__v\": 0\n    },\n    \"project\": {\n      \"_id\": \"6ab55ef161ba06d9dad8da77\",\n      \"name\": \"Mobile Banking App\",\n      \"description\": \"Design and development of a company portfolio website.\",\n      \"client\": \"6a8ebe631a0222c56201c19e\",\n      \"startDate\": \"2026-09-10T00:00:00.000Z\",\n      \"deadline\": \"2026-10-20T00:00:00.000Z\",\n      \"status\": \"In Progress\",\n      \"createdAt\": \"2026-09-24T17:33:37.094Z\",\n      \"updatedAt\": \"2026-09-24T17:33:37.094Z\",\n      \"__v\": 0\n    },\n    \"issueDate\": \"2026-10-01T00:00:00.000Z\",\n    \"dueDate\": \"2026-10-15T00:00:00.000Z\",\n    \"items\": [\n      {\n        \"description\": \"Banking App Development\",\n        \"quantity\": 1,\n        \"unitPrice\": 50000,\n        \"total\": 50000,\n        \"_id\": \"6abe8e46e3edd1fa17692240\"\n      },\n      {\n        \"description\": \"Mobile Banking UI Design\",\n        \"quantity\": 1,\n        \"unitPrice\": 15000,\n        \"total\": 15000,\n        \"_id\": \"6abe8e46e3edd1fa17692241\"\n      },\n      {\n        \"description\": \"Security & Authentication Module\",\n        \"quantity\": 1,\n        \"unitPrice\": 20000,\n        \"total\": 20000,\n        \"_id\": \"6abe8e46e3edd1fa17692242\"\n      }\n    ],\n    \"subtotal\": 85000,\n    \"totalAmount\": 85000,\n    \"status\": \"Draft\",\n    \"createdAt\": \"2026-10-01T16:45:58.483Z\",\n    \"updatedAt\": \"2026-10-01T16:45:58.483Z\",\n    \"__v\": 0\n  }\n]"
+        }
+      ]
+    },
+    {
+      "name": "Get Invoice by ID",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5001/api/invoices/6abe8d12e3edd1fa17692238",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5001",
+          "path": [
+            "api",
+            "invoices",
+            "6abe8d12e3edd1fa17692238"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "Get Invoice by ID",
+          "originalRequest": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:5001/api/invoices/6abe8d12e3edd1fa17692238",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5001",
+              "path": [
+                "api",
+                "invoices",
+                "6abe8d12e3edd1fa17692238"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": "json",
+          "header": [
+            {
+              "key": "x-powered-by",
+              "value": "Express"
+            },
+            {
+              "key": "access-control-allow-origin",
+              "value": "*"
+            },
+            {
+              "key": "content-type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "content-length",
+              "value": "1140"
+            },
+            {
+              "key": "etag",
+              "value": "W/\"474-I4Qn6SNhn9sRrOF7Y8YM277hQjo\""
+            },
+            {
+              "key": "date",
+              "value": "Thu, 01 Oct 2026 16:54:53 GMT"
+            },
+            {
+              "key": "connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "keep-alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n  \"_id\": \"6abe8d12e3edd1fa17692238\",\n  \"invoiceNumber\": \"INV-001\",\n  \"client\": {\n    \"_id\": \"6a8f09eb1edd400aafb720d7\",\n    \"name\": \"singhhargeet\",\n    \"email\": \"singh1648@hotmail.com\",\n    \"phone\": \"9100485756\",\n    \"company\": \"Indian technology corporation limited\",\n    \"status\": \"Active\",\n    \"createdAt\": \"2026-08-26T15:44:43.743Z\",\n    \"updatedAt\": \"2026-08-26T15:44:43.743Z\",\n    \"__v\": 0\n  },\n  \"project\": {\n    \"_id\": \"6a99a5a99d1f3b74db8ebe60\",\n    \"name\": \"Company Portfolio\",\n    \"description\": \"Design and development of a company portfolio website.\",\n    \"client\": \"6a8ebe631a0222c56201c19e\",\n    \"startDate\": \"2026-09-10T00:00:00.000Z\",\n    \"deadline\": \"2026-10-20T00:00:00.000Z\",\n    \"status\": \"Completed\",\n    \"createdAt\": \"2026-09-03T16:51:53.288Z\",\n    \"updatedAt\": \"2026-09-03T16:51:53.288Z\",\n    \"__v\": 0\n  },\n  \"issueDate\": \"2026-10-01T00:00:00.000Z\",\n  \"dueDate\": \"2026-10-15T00:00:00.000Z\",\n  \"items\": [\n    {\n      \"description\": \"Website Development\",\n      \"quantity\": 2,\n      \"unitPrice\": 500,\n      \"total\": 1000,\n      \"_id\": \"6abe8d12e3edd1fa17692239\"\n    },\n    {\n      \"description\": \"Database Setup\",\n      \"quantity\": 1,\n      \"unitPrice\": 300,\n      \"total\": 300,\n      \"_id\": \"6abe8d12e3edd1fa1769223a\"\n    }\n  ],\n  \"subtotal\": 1300,\n  \"totalAmount\": 1300,\n  \"status\": \"Draft\",\n  \"createdAt\": \"2026-10-01T16:40:50.315Z\",\n  \"updatedAt\": \"2026-10-01T16:40:50.315Z\",\n  \"__v\": 0\n}"
+        }
+      ]
+    },
+    {
+      "name": "update_invoice",
+      "request": {
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"invoiceNumber\": \"INV-001\",\r\n  \"client\": \"6a8f09eb1edd400aafb720d7\",\r\n  \"project\": \"6a99a5a99d1f3b74db8ebe60\",\r\n  \"issueDate\": \"2026-10-01\",\r\n  \"dueDate\": \"2026-10-20\",\r\n  \"items\": [\r\n    {\r\n      \"description\": \"Website Development - Updated\",\r\n      \"quantity\": 2,\r\n      \"unitPrice\": 600\r\n    },\r\n    {\r\n      \"description\": \"Database Setup\",\r\n      \"quantity\": 1,\r\n      \"unitPrice\": 400\r\n    }\r\n  ],\r\n  \"status\": \"Paid\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:5001/api/invoices/6abe8d12e3edd1fa17692238",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5001",
+          "path": [
+            "api",
+            "invoices",
+            "6abe8d12e3edd1fa17692238"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "update_invoice",
+          "originalRequest": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"invoiceNumber\": \"INV-001\",\r\n  \"client\": \"6a8f09eb1edd400aafb720d7\",\r\n  \"project\": \"6a99a5a99d1f3b74db8ebe60\",\r\n  \"issueDate\": \"2026-10-01\",\r\n  \"dueDate\": \"2026-10-20\",\r\n  \"items\": [\r\n    {\r\n      \"description\": \"Website Development - Updated\",\r\n      \"quantity\": 2,\r\n      \"unitPrice\": 600\r\n    },\r\n    {\r\n      \"description\": \"Database Setup\",\r\n      \"quantity\": 1,\r\n      \"unitPrice\": 400\r\n    }\r\n  ],\r\n  \"status\": \"Paid\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:5001/api/invoices/6abe8d12e3edd1fa17692238",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5001",
+              "path": [
+                "api",
+                "invoices",
+                "6abe8d12e3edd1fa17692238"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": "json",
+          "header": [
+            {
+              "key": "x-powered-by",
+              "value": "Express"
+            },
+            {
+              "key": "access-control-allow-origin",
+              "value": "*"
+            },
+            {
+              "key": "content-type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "content-length",
+              "value": "586"
+            },
+            {
+              "key": "etag",
+              "value": "W/\"24a-rkOuqDp9VXK+hnTjGhlQ66CJQAQ\""
+            },
+            {
+              "key": "date",
+              "value": "Thu, 01 Oct 2026 17:07:43 GMT"
+            },
+            {
+              "key": "connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "keep-alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n  \"_id\": \"6abe8d12e3edd1fa17692238\",\n  \"invoiceNumber\": \"INV-001\",\n  \"client\": \"6a8f09eb1edd400aafb720d7\",\n  \"project\": \"6a99a5a99d1f3b74db8ebe60\",\n  \"issueDate\": \"2026-10-01T00:00:00.000Z\",\n  \"dueDate\": \"2026-10-20T00:00:00.000Z\",\n  \"items\": [\n    {\n      \"description\": \"Website Development - Updated\",\n      \"quantity\": 2,\n      \"unitPrice\": 600,\n      \"total\": 1200,\n      \"_id\": \"6abe935f0040f59220040f3a\"\n    },\n    {\n      \"description\": \"Database Setup\",\n      \"quantity\": 1,\n      \"unitPrice\": 400,\n      \"total\": 400,\n      \"_id\": \"6abe935f0040f59220040f3b\"\n    }\n  ],\n  \"subtotal\": 1600,\n  \"totalAmount\": 1600,\n  \"status\": \"Paid\",\n  \"createdAt\": \"2026-10-01T16:40:50.315Z\",\n  \"updatedAt\": \"2026-10-01T17:07:43.485Z\",\n  \"__v\": 1\n}"
+        }
+      ]
+    },
+    {
+      "name": "delete_invoice",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5001/api/invoices/6abe8d12e3edd1fa17692238",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5001",
+          "path": [
+            "api",
+            "invoices",
+            "6abe8d12e3edd1fa17692238"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "delete_invoice_admin_permission",
+          "originalRequest": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:5001/api/invoices/6abe8d12e3edd1fa17692238",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5001",
+              "path": [
+                "api",
+                "invoices",
+                "6abe8d12e3edd1fa17692238"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": "json",
+          "header": [
+            {
+              "key": "x-powered-by",
+              "value": "Express"
+            },
+            {
+              "key": "access-control-allow-origin",
+              "value": "*"
+            },
+            {
+              "key": "content-type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "content-length",
+              "value": "42"
+            },
+            {
+              "key": "etag",
+              "value": "W/\"2a-Y2BFMYge38c5npzU+aEpc2f53pQ\""
+            },
+            {
+              "key": "date",
+              "value": "Thu, 01 Oct 2026 17:09:50 GMT"
+            },
+            {
+              "key": "connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "keep-alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n  \"message\": \"Invoice deleted successfully\"\n}"
+        },
+        {
+          "name": "delete_invoice_employee_permission",
+          "originalRequest": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:5001/api/invoices/6abe8d12e3edd1fa17692238",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5001",
+              "path": [
+                "api",
+                "invoices",
+                "6abe8d12e3edd1fa17692238"
+              ]
+            }
+          },
+          "status": "Forbidden",
+          "code": 403,
+          "_postman_previewlanguage": "json",
+          "header": [
+            {
+              "key": "x-powered-by",
+              "value": "Express"
+            },
+            {
+              "key": "access-control-allow-origin",
+              "value": "*"
+            },
+            {
+              "key": "content-type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "content-length",
+              "value": "56"
+            },
+            {
+              "key": "etag",
+              "value": "W/\"38-uQu4rcIUM5v89LvMrJni4G9lDWk\""
+            },
+            {
+              "key": "date",
+              "value": "Thu, 01 Oct 2026 18:08:57 GMT"
+            },
+            {
+              "key": "connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "keep-alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n  \"message\": \"Access denied. You do not have permission.\"\n}"
+        }
+      ]
+    },
+    {
+      "name": "Search_invoices",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5001/api/invoices?search=CAR",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5001",
+          "path": [
+            "api",
+            "invoices"
+          ],
+          "query": [
+            {
+              "key": "search",
+              "value": "CAR"
+            }
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "Search_invoice_CAR",
+          "originalRequest": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:5001/api/invoices?search=CAR",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5001",
+              "path": [
+                "api",
+                "invoices"
+              ],
+              "query": [
+                {
+                  "key": "search",
+                  "value": "CAR"
+                }
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": "json",
+          "header": [
+            {
+              "key": "x-powered-by",
+              "value": "Express"
+            },
+            {
+              "key": "access-control-allow-origin",
+              "value": "*"
+            },
+            {
+              "key": "content-type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "content-length",
+              "value": "1239"
+            },
+            {
+              "key": "etag",
+              "value": "W/\"4d7-xK8am6Tu8h8+JNuKGTUPWZEF6BA\""
+            },
+            {
+              "key": "date",
+              "value": "Thu, 01 Oct 2026 17:34:22 GMT"
+            },
+            {
+              "key": "connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "keep-alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "[\n  {\n    \"_id\": \"6abe8ddce3edd1fa1769223b\",\n    \"invoiceNumber\": \"INV-CAR-002\",\n    \"client\": {\n      \"_id\": \"6a8f09eb1edd400aafb720d7\",\n      \"name\": \"singhhargeet\",\n      \"email\": \"singh1648@hotmail.com\",\n      \"phone\": \"9100485756\",\n      \"company\": \"Indian technology corporation limited\",\n      \"status\": \"Active\",\n      \"createdAt\": \"2026-08-26T15:44:43.743Z\",\n      \"updatedAt\": \"2026-08-26T15:44:43.743Z\",\n      \"__v\": 0\n    },\n    \"project\": {\n      \"_id\": \"6ab5603261ba06d9dad8da7b\",\n      \"name\": \"Car Rental System\",\n      \"description\": \"building a car Rental system.\",\n      \"client\": \"6a8f09eb1edd400aafb720d7\",\n      \"startDate\": \"2027-05-10T00:00:00.000Z\",\n      \"deadline\": \"2027-08-21T00:00:00.000Z\",\n      \"status\": \"On Hold\",\n      \"createdAt\": \"2026-09-24T17:38:58.235Z\",\n      \"updatedAt\": \"2026-09-24T17:38:58.235Z\",\n      \"__v\": 0\n    },\n    \"issueDate\": \"2026-10-01T00:00:00.000Z\",\n    \"dueDate\": \"2026-10-10T00:00:00.000Z\",\n    \"items\": [\n      {\n        \"description\": \"Toyota Corolla Rental - 5 Days\",\n        \"quantity\": 5,\n        \"unitPrice\": 4000,\n        \"total\": 20000,\n        \"_id\": \"6abe8ddce3edd1fa1769223c\"\n      },\n      {\n        \"description\": \"GPS Navigation\",\n        \"quantity\": 1,\n        \"unitPrice\": 1500,\n        \"total\": 1500,\n        \"_id\": \"6abe8ddce3edd1fa1769223d\"\n      },\n      {\n        \"description\": \"Insurance\",\n        \"quantity\": 1,\n        \"unitPrice\": 3000,\n        \"total\": 3000,\n        \"_id\": \"6abe8ddce3edd1fa1769223e\"\n      }\n    ],\n    \"subtotal\": 24500,\n    \"totalAmount\": 24500,\n    \"status\": \"Sent\",\n    \"createdAt\": \"2026-10-01T16:44:12.412Z\",\n    \"updatedAt\": \"2026-10-01T16:44:12.412Z\",\n    \"__v\": 0\n  }\n]"
+        }
+      ]
+    },
+    {
+      "name": "Filter by Client",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5001/api/invoices?client=6a8ebe631a0222c56201c19e",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5001",
+          "path": [
+            "api",
+            "invoices"
+          ],
+          "query": [
+            {
+              "key": "client",
+              "value": "6a8ebe631a0222c56201c19e"
+            }
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "Filter by Client",
+          "originalRequest": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:5001/api/invoices?client=6a8ebe631a0222c56201c19e",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5001",
+              "path": [
+                "api",
+                "invoices"
+              ],
+              "query": [
+                {
+                  "key": "client",
+                  "value": "6a8ebe631a0222c56201c19e"
+                }
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": "json",
+          "header": [
+            {
+              "key": "x-powered-by",
+              "value": "Express"
+            },
+            {
+              "key": "access-control-allow-origin",
+              "value": "*"
+            },
+            {
+              "key": "content-type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "content-length",
+              "value": "1284"
+            },
+            {
+              "key": "etag",
+              "value": "W/\"504-7PKVaSJ8GjlypK0m+GU2i6TeWx4\""
+            },
+            {
+              "key": "date",
+              "value": "Thu, 01 Oct 2026 17:38:06 GMT"
+            },
+            {
+              "key": "connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "keep-alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "[\n  {\n    \"_id\": \"6abe8e46e3edd1fa1769223f\",\n    \"invoiceNumber\": \"INV-BANK-003\",\n    \"client\": {\n      \"_id\": \"6a8ebe631a0222c56201c19e\",\n      \"name\": \"nadeem jan\",\n      \"email\": \"nadeembobo590@gmail.com\",\n      \"phone\": \"094746188596\",\n      \"company\": \"solution marker\",\n      \"status\": \"Inactive\",\n      \"createdAt\": \"2026-08-26T10:22:27.022Z\",\n      \"updatedAt\": \"2026-08-26T10:22:27.022Z\",\n      \"__v\": 0\n    },\n    \"project\": {\n      \"_id\": \"6ab55ef161ba06d9dad8da77\",\n      \"name\": \"Mobile Banking App\",\n      \"description\": \"Design and development of a company portfolio website.\",\n      \"client\": \"6a8ebe631a0222c56201c19e\",\n      \"startDate\": \"2026-09-10T00:00:00.000Z\",\n      \"deadline\": \"2026-10-20T00:00:00.000Z\",\n      \"status\": \"In Progress\",\n      \"createdAt\": \"2026-09-24T17:33:37.094Z\",\n      \"updatedAt\": \"2026-09-24T17:33:37.094Z\",\n      \"__v\": 0\n    },\n    \"issueDate\": \"2026-10-01T00:00:00.000Z\",\n    \"dueDate\": \"2026-10-15T00:00:00.000Z\",\n    \"items\": [\n      {\n        \"description\": \"Banking App Development\",\n        \"quantity\": 1,\n        \"unitPrice\": 50000,\n        \"total\": 50000,\n        \"_id\": \"6abe8e46e3edd1fa17692240\"\n      },\n      {\n        \"description\": \"Mobile Banking UI Design\",\n        \"quantity\": 1,\n        \"unitPrice\": 15000,\n        \"total\": 15000,\n        \"_id\": \"6abe8e46e3edd1fa17692241\"\n      },\n      {\n        \"description\": \"Security & Authentication Module\",\n        \"quantity\": 1,\n        \"unitPrice\": 20000,\n        \"total\": 20000,\n        \"_id\": \"6abe8e46e3edd1fa17692242\"\n      }\n    ],\n    \"subtotal\": 85000,\n    \"totalAmount\": 85000,\n    \"status\": \"Draft\",\n    \"createdAt\": \"2026-10-01T16:45:58.483Z\",\n    \"updatedAt\": \"2026-10-01T16:45:58.483Z\",\n    \"__v\": 0\n  }\n]"
+        }
+      ]
+    },
+    {
+      "name": "Filter_Invoices_by_Project",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5001/api/invoices?project=6ab55ef161ba06d9dad8da77",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5001",
+          "path": [
+            "api",
+            "invoices"
+          ],
+          "query": [
+            {
+              "key": "project",
+              "value": "6ab55ef161ba06d9dad8da77"
+            }
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "Filter_Invoices_by_Project",
+          "originalRequest": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:5001/api/invoices?project=6ab55ef161ba06d9dad8da77",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5001",
+              "path": [
+                "api",
+                "invoices"
+              ],
+              "query": [
+                {
+                  "key": "project",
+                  "value": "6ab55ef161ba06d9dad8da77"
+                }
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": "json",
+          "header": [
+            {
+              "key": "x-powered-by",
+              "value": "Express"
+            },
+            {
+              "key": "access-control-allow-origin",
+              "value": "*"
+            },
+            {
+              "key": "content-type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "content-length",
+              "value": "1284"
+            },
+            {
+              "key": "etag",
+              "value": "W/\"504-7PKVaSJ8GjlypK0m+GU2i6TeWx4\""
+            },
+            {
+              "key": "date",
+              "value": "Thu, 01 Oct 2026 17:47:59 GMT"
+            },
+            {
+              "key": "connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "keep-alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "[\n  {\n    \"_id\": \"6abe8e46e3edd1fa1769223f\",\n    \"invoiceNumber\": \"INV-BANK-003\",\n    \"client\": {\n      \"_id\": \"6a8ebe631a0222c56201c19e\",\n      \"name\": \"nadeem jan\",\n      \"email\": \"nadeembobo590@gmail.com\",\n      \"phone\": \"094746188596\",\n      \"company\": \"solution marker\",\n      \"status\": \"Inactive\",\n      \"createdAt\": \"2026-08-26T10:22:27.022Z\",\n      \"updatedAt\": \"2026-08-26T10:22:27.022Z\",\n      \"__v\": 0\n    },\n    \"project\": {\n      \"_id\": \"6ab55ef161ba06d9dad8da77\",\n      \"name\": \"Mobile Banking App\",\n      \"description\": \"Design and development of a company portfolio website.\",\n      \"client\": \"6a8ebe631a0222c56201c19e\",\n      \"startDate\": \"2026-09-10T00:00:00.000Z\",\n      \"deadline\": \"2026-10-20T00:00:00.000Z\",\n      \"status\": \"In Progress\",\n      \"createdAt\": \"2026-09-24T17:33:37.094Z\",\n      \"updatedAt\": \"2026-09-24T17:33:37.094Z\",\n      \"__v\": 0\n    },\n    \"issueDate\": \"2026-10-01T00:00:00.000Z\",\n    \"dueDate\": \"2026-10-15T00:00:00.000Z\",\n    \"items\": [\n      {\n        \"description\": \"Banking App Development\",\n        \"quantity\": 1,\n        \"unitPrice\": 50000,\n        \"total\": 50000,\n        \"_id\": \"6abe8e46e3edd1fa17692240\"\n      },\n      {\n        \"description\": \"Mobile Banking UI Design\",\n        \"quantity\": 1,\n        \"unitPrice\": 15000,\n        \"total\": 15000,\n        \"_id\": \"6abe8e46e3edd1fa17692241\"\n      },\n      {\n        \"description\": \"Security & Authentication Module\",\n        \"quantity\": 1,\n        \"unitPrice\": 20000,\n        \"total\": 20000,\n        \"_id\": \"6abe8e46e3edd1fa17692242\"\n      }\n    ],\n    \"subtotal\": 85000,\n    \"totalAmount\": 85000,\n    \"status\": \"Draft\",\n    \"createdAt\": \"2026-10-01T16:45:58.483Z\",\n    \"updatedAt\": \"2026-10-01T16:45:58.483Z\",\n    \"__v\": 0\n  }\n]"
+        }
+      ]
+    },
+    {
+      "name": "Filter_Invoices_by_Status",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5001/api/invoices?status=Draft",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5001",
+          "path": [
+            "api",
+            "invoices"
+          ],
+          "query": [
+            {
+              "key": "status",
+              "value": "Draft"
+            }
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "Filter_Invoices_by_Status",
+          "originalRequest": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:5001/api/invoices?status=Draft",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5001",
+              "path": [
+                "api",
+                "invoices"
+              ],
+              "query": [
+                {
+                  "key": "status",
+                  "value": "Draft"
+                }
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": "json",
+          "header": [
+            {
+              "key": "x-powered-by",
+              "value": "Express"
+            },
+            {
+              "key": "access-control-allow-origin",
+              "value": "*"
+            },
+            {
+              "key": "content-type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "content-length",
+              "value": "1284"
+            },
+            {
+              "key": "etag",
+              "value": "W/\"504-7PKVaSJ8GjlypK0m+GU2i6TeWx4\""
+            },
+            {
+              "key": "date",
+              "value": "Thu, 01 Oct 2026 17:52:33 GMT"
+            },
+            {
+              "key": "connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "keep-alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "[\n  {\n    \"_id\": \"6abe8e46e3edd1fa1769223f\",\n    \"invoiceNumber\": \"INV-BANK-003\",\n    \"client\": {\n      \"_id\": \"6a8ebe631a0222c56201c19e\",\n      \"name\": \"nadeem jan\",\n      \"email\": \"nadeembobo590@gmail.com\",\n      \"phone\": \"094746188596\",\n      \"company\": \"solution marker\",\n      \"status\": \"Inactive\",\n      \"createdAt\": \"2026-08-26T10:22:27.022Z\",\n      \"updatedAt\": \"2026-08-26T10:22:27.022Z\",\n      \"__v\": 0\n    },\n    \"project\": {\n      \"_id\": \"6ab55ef161ba06d9dad8da77\",\n      \"name\": \"Mobile Banking App\",\n      \"description\": \"Design and development of a company portfolio website.\",\n      \"client\": \"6a8ebe631a0222c56201c19e\",\n      \"startDate\": \"2026-09-10T00:00:00.000Z\",\n      \"deadline\": \"2026-10-20T00:00:00.000Z\",\n      \"status\": \"In Progress\",\n      \"createdAt\": \"2026-09-24T17:33:37.094Z\",\n      \"updatedAt\": \"2026-09-24T17:33:37.094Z\",\n      \"__v\": 0\n    },\n    \"issueDate\": \"2026-10-01T00:00:00.000Z\",\n    \"dueDate\": \"2026-10-15T00:00:00.000Z\",\n    \"items\": [\n      {\n        \"description\": \"Banking App Development\",\n        \"quantity\": 1,\n        \"unitPrice\": 50000,\n        \"total\": 50000,\n        \"_id\": \"6abe8e46e3edd1fa17692240\"\n      },\n      {\n        \"description\": \"Mobile Banking UI Design\",\n        \"quantity\": 1,\n        \"unitPrice\": 15000,\n        \"total\": 15000,\n        \"_id\": \"6abe8e46e3edd1fa17692241\"\n      },\n      {\n        \"description\": \"Security & Authentication Module\",\n        \"quantity\": 1,\n        \"unitPrice\": 20000,\n        \"total\": 20000,\n        \"_id\": \"6abe8e46e3edd1fa17692242\"\n      }\n    ],\n    \"subtotal\": 85000,\n    \"totalAmount\": 85000,\n    \"status\": \"Draft\",\n    \"createdAt\": \"2026-10-01T16:45:58.483Z\",\n    \"updatedAt\": \"2026-10-01T16:45:58.483Z\",\n    \"__v\": 0\n  }\n]"
+        }
+      ]
+    },
+    {
+      "name": "Combined_invoices_filter",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5001/api/invoices?search=INV&status=Overdue",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5001",
+          "path": [
+            "api",
+            "invoices"
+          ],
+          "query": [
+            {
+              "key": "search",
+              "value": "INV"
+            },
+            {
+              "key": "status",
+              "value": "Overdue"
+            }
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "Combined_invoices_filter",
+          "originalRequest": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:5001/api/invoices?search=INV&status=Overdue",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5001",
+              "path": [
+                "api",
+                "invoices"
+              ],
+              "query": [
+                {
+                  "key": "search",
+                  "value": "INV"
+                },
+                {
+                  "key": "status",
+                  "value": "Overdue"
+                }
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": "json",
+          "header": [
+            {
+              "key": "x-powered-by",
+              "value": "Express"
+            },
+            {
+              "key": "access-control-allow-origin",
+              "value": "*"
+            },
+            {
+              "key": "content-type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "content-length",
+              "value": "1021"
+            },
+            {
+              "key": "etag",
+              "value": "W/\"3fd-LnICle1ld2NrfphaDMOeuWS6zI0\""
+            },
+            {
+              "key": "date",
+              "value": "Thu, 01 Oct 2026 17:56:00 GMT"
+            },
+            {
+              "key": "connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "keep-alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "[\n  {\n    \"_id\": \"6abe97000040f59220040f3e\",\n    \"invoiceNumber\": \"INV-OVERDUE-004\",\n    \"client\": {\n      \"_id\": \"6a8f09eb1edd400aafb720d7\",\n      \"name\": \"singhhargeet\",\n      \"email\": \"singh1648@hotmail.com\",\n      \"phone\": \"9100485756\",\n      \"company\": \"Indian technology corporation limited\",\n      \"status\": \"Active\",\n      \"createdAt\": \"2026-08-26T15:44:43.743Z\",\n      \"updatedAt\": \"2026-08-26T15:44:43.743Z\",\n      \"__v\": 0\n    },\n    \"project\": {\n      \"_id\": \"6ab5603261ba06d9dad8da7b\",\n      \"name\": \"Car Rental System\",\n      \"description\": \"building a car Rental system.\",\n      \"client\": \"6a8f09eb1edd400aafb720d7\",\n      \"startDate\": \"2027-05-10T00:00:00.000Z\",\n      \"deadline\": \"2027-08-21T00:00:00.000Z\",\n      \"status\": \"On Hold\",\n      \"createdAt\": \"2026-09-24T17:38:58.235Z\",\n      \"updatedAt\": \"2026-09-24T17:38:58.235Z\",\n      \"__v\": 0\n    },\n    \"issueDate\": \"2026-09-01T00:00:00.000Z\",\n    \"dueDate\": \"2026-09-15T00:00:00.000Z\",\n    \"items\": [\n      {\n        \"description\": \"Car Rental Service\",\n        \"quantity\": 3,\n        \"unitPrice\": 5000,\n        \"total\": 15000,\n        \"_id\": \"6abe97000040f59220040f3f\"\n      }\n    ],\n    \"subtotal\": 15000,\n    \"totalAmount\": 15000,\n    \"status\": \"Overdue\",\n    \"createdAt\": \"2026-10-01T17:23:12.628Z\",\n    \"updatedAt\": \"2026-10-01T17:23:12.628Z\",\n    \"__v\": 0\n  }\n]"
+        }
+      ]
+    }
+  ]
+}
